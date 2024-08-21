@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#divtext{
+            background-color: rgb(33, 255, 4);
+            color: yellow;
+            width: 50%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+    <script>
+        function changecolor(){
+            var bkcolor = document.getElementById("bkcolor").value;
+            console.log(bkcolor)
+            var textcolor = document.getElementById("textcolor").value;
+            console.log(textcolor)
+            document.getElementById("title").innerHTML = document.getElementById("txtInput").value;
+            document.getElementById("divtext").style.backgroundColor = bkcolor;
+            document.getElementById("divtext").style.color = textcolor;
+        }
+    </script>
+</head>
+<body>
+    <div id = "divtext">
+        <h1 id="title">quyendzvcb</h1>
+    </div>
+    <p>Nhập nội dung: 
+        <input type="text" id="txtInput" autofocus value="quyendz" size="40">
+    </p>
+    <p>
+        Màu nền <input type="color" id="bkcolor" value="#21ff04">
+    </p>
+    <p>
+        Màu chữ <input type="color" id="textcolor" value="#FFFF00">
+    </p>
+    <input type="button" onclick="changecolor()" value="Thực hiện">
+</body>
+</html>
